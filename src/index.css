@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap");
+@import "tailwindcss";
+
+:root {
+  /* ==============================
+     BACKGROUND COLORS
+  ============================== */
+
+  --bg-main: #120e18;
+  --bg-card: #1c1525;
+  --bg-card-hover: #261d33;
+
+  /* ==============================
+     PRIMARY ACCENT - PINK
+  ============================== */
+
+  --accent-pink: #ff498b;
+  --accent-pink-light: #ff6ec7;
+  --accent-pink-glow: rgba(255, 73, 139, 0.35);
+
+  /* ==============================
+     SECONDARY ACCENT - CYAN
+  ============================== */
+
+  --accent-cyan: #00d8ff;
+  --accent-cyan-glow: rgba(0, 216, 255, 0.25);
+
+  /* ==============================
+     OPTIONAL PURPLE ACCENT
+  ============================== */
+
+  --accent-purple: #9966ff;
+
+  /* ==============================
+     TEXT COLORS
+  ============================== */
+
+  --text-main: #ffffff;
+  --text-muted: #a098b2;
+
+  /* ==============================
+     BORDERS
+  ============================== */
+
+  --border-subtle: rgba(255, 255, 255, 0.08);
+
+  /* ==============================
+     BORDER RADIUS
+  ============================== */
+
+  --card-radius: 16px;
+  --button-radius: 9999px;
+}
+
+/* Smooth scrolling */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Global reset */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+
+  background-color: var(--bg-main);
+  color: var(--text-main);
+
+  font-family: "Outfit", sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Text selection */
+
+::selection {
+  background-color: var(--accent-pink);
+  color: white;
+}
+
+/* Better default button behavior */
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Remove default link styling */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+/* Sakura Petals */
+
+.sakura-petal {
+  position: absolute;
+  top: -40px;
+
+  border-radius: 100% 0 100% 0;
+
+  background: linear-gradient(
+    135deg,
+    #ff9fbe,
+    #ff498b
+  );
+
+  box-shadow:
+    0 0 10px rgba(255, 73, 139, 0.25);
+
+  animation-name: sakuraFall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+  transform: rotate(45deg);
+}
+
+@keyframes sakuraFall {
+  0% {
+    transform:
+      translate3d(0, -50px, 0)
+      rotate(0deg);
+
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0.8;
+  }
+
+  100% {
+    transform:
+      translate3d(var(--drift), 110vh, 0)
+      rotate(720deg);
+
+    opacity: 0;
+  }
+}
+
+/* Accessibility + performance */
+@media (prefers-reduced-motion: reduce) {
+  .sakura-petal {
+    animation: none;
+  }
+}
+/* ================================
+   Animated Portfolio Background
+================================ */
+
+.neon-glow {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  filter: blur(130px);
+  opacity: 0.16;
+  animation: glowFloat 16s ease-in-out infinite alternate;
+}
+
+/* Pink glow */
+.neon-glow-pink {
+  top: 8%;
+  left: -120px;
+  background: #ff498b;
+}
+
+/* Cyan glow */
+.neon-glow-cyan {
+  top: 45%;
+  right: -160px;
+  background: #00d8ff;
+  animation-delay: -6s;
+}
+
+/* Purple glow */
+.neon-glow-purple {
+  bottom: -150px;
+  left: 35%;
+  background: #9966ff;
+  animation-delay: -10s;
+}
+
+@keyframes glowFloat {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(70px, -40px, 0) scale(1.15);
+  }
+
+  100% {
+    transform: translate3d(-40px, 50px, 0) scale(0.95);
+  }
+}
+
+/* Subtle developer grid */
+
+.developer-grid {
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    );
+
+  background-size: 55px 55px;
+
+  mask-image: radial-gradient(
+    circle at center,
+    black 20%,
+    transparent 75%
+  );
+
+  -webkit-mask-image: radial-gradient(
+    circle at center,
+    black 20%,
+    transparent 75%
+  );
+}
+
+@media (max-width: 768px) {
+  .neon-glow {
+    width: 280px;
+    height: 280px;
+    filter: blur(100px);
+    opacity: 0.12;
+  }
+
+  .developer-grid {
+    background-size: 40px 40px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .neon-glow {
+    animation: none;
+  }
+}
