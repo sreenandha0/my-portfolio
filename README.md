@@ -1,16 +1,110 @@
-# React + Vite
+# 🌸 Sreenandha's Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive, and anime-inspired personal developer portfolio built with React, Vite, Tailwind CSS, and Framer Motion.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+🌐 [Visit My Portfolio](https://my-portfolio-rose-eight-7w7e825pm8.vercel.app/)
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 🌸 Anime-inspired developer portfolio design
+- ✨ Smooth animations and transitions
+- 🌸 Sakura petal animation effects
+- 📱 Fully responsive layout
+- 💼 Project showcase
+- 🧠 Technical skills section
+- 💻 Experience section
+- 🎓 Education details
+- 🏆 Certifications section
+- 📄 Interactive resume page
+- 🔗 GitHub, LinkedIn, and Email integration
+- ⚡ Fast development and performance with Vite
 
-## Expanding the ESLint configuration
+## 🛠️ Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- Vite
+- Tailwind CSS
+- Framer Motion
+- JavaScript
+- HTML5
+- CSS3
+
+## 📂 Project Structure
+
+```text
+src/
+│
+├── assets/
+│
+├── components/
+│   ├── About.jsx
+│   ├── AnimatedBackground.jsx
+│   ├── Certifications.jsx
+│   ├── Contact.jsx
+│   ├── Education.jsx
+│   ├── Experience.jsx
+│   ├── Footer.jsx
+│   ├── Hero.jsx
+│   ├── Navbar.jsx
+│   ├── Projects.jsx
+│   ├── Reveal.jsx
+│   ├── SakuraPetals.jsx
+│   └── Skills.jsx
+│
+├── data/
+│   ├── certifications.js
+│   ├── projects.js
+│   └── skills.js
+│
+├── pages/
+│   └── Resume.jsx
+│
+├── App.jsx
+├── App.css
+├── index.css
+└── main.jsx
+```
+
+## 💻 Run Locally
+
+Clone the repository:
+
+```bash
+git clone https://github.com/sreenandha0/my-portfolio.git
+```
+
+Navigate to the project:
+
+```bash
+cd my-portfolio
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+## 👩‍💻 About Me
+
+I am an MCA student and aspiring Software Engineer with an interest in software development and full-stack web development.
+
+I enjoy building practical applications and continuously improving my skills through projects, internships, testing, debugging, and hands-on learning.
+
+## 🔗 Connect With Me
+
+- GitHub: https://github.com/sreenandha0
+- LinkedIn: https://linkedin.com/in/sreenandhams
+- Portfolio: https://my-portfolio-rose-eight-7w7e825pm8.vercel.app/
+
+---
+
+⭐ If you like this project, consider giving it a star!
